@@ -1,0 +1,821 @@
+{
+	"info": {
+		"_postman_id": "35a99dc4-5a33-4675-8f55-e86bacf79abe",
+		"name": "Automation Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44888422",
+		"_collection_link": "https://mamun-2196736.postman.co/workspace/mamun's-Workspace~13a2c1fe-dc3c-45c1-8031-edb266bbe063/collection/44888422-35a99dc4-5a33-4675-8f55-e86bacf79abe?action=share&source=collection_link&creator=44888422"
+	},
+	"item": [
+		{
+			"name": "Get All Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () =>{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"JSON response code is 200\", () =>{\r",
+							"    let responseCode = pm.response.json().responseCode;\r",
+							"    pm.expect(responseCode).to.equal(200); // Added expectation for response code\r",
+							"});\r",
+							"\r",
+							"pm.test(\"All products list\", () =>{\r",
+							"    let products = pm.response.json().products;\r",
+							"    pm.expect(products).to.be.an('array').that.is.not.empty; // Fixed to check for products property\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/productsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To All Products List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Message status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response code is 405.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(405);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"This request method is not supported.\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"This request method is not supported.\");\r",
+							"    });"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/productsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 200.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/brandsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT To All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Message status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response code is 405.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(405);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"This request method is not supported.\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"This request method is not supported.\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/brandsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Search Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Message status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Response code is 200.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search_product",
+							"value": "top",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/searchProduct",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Search Product without search_product parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 405.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(405);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"This request method is not supported.\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"This request method is not supported.\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/searchProduct",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login with valid details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 200.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response message is User exists\", () => {\r",
+							"    pm.expect(pm.response.text()).to.include(\"User exists!\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "itmamun29@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Itmamun@29",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login without email parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 400.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Bad request, email or password parameter is missing in POST request.\", () => {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Bad request, email or password parameter is missing in POST request.\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "Itmamun@29",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE To Verify Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 405.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(405);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"This request method is not supported.\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"This request method is not supported.\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Verify Login with invalid details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 405.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"TUser not found!\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"User not found!\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "git@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "git@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST To Create/Register User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 201.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"User created!\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"User created!\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abdu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abdu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "mr.",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "birth_month",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "birth_year",
+							"value": "1997",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "abdul",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "all",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "student",
+							"type": "text"
+						},
+						{
+							"key": "address1",
+							"value": "mymen",
+							"type": "text"
+						},
+						{
+							"key": "address2",
+							"value": "bypass",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Bangladesh",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "2216",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "mymensingh",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "mymensingh",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "01765385990",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/createAccount",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"createAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT METHOD To Update User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 200.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"User created!\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"User updated!\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abdu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abdu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "mr.",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "birth_month",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "birth_year",
+							"value": "1990",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "abdul",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "all",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "student",
+							"type": "text"
+						},
+						{
+							"key": "address1",
+							"value": "mymen",
+							"type": "text"
+						},
+						{
+							"key": "address2",
+							"value": "bypass",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Bangladesh",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "2216",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "mymensingh",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "mymensingh",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "01765385990",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/updateAccount",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"updateAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user account detail by email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 200.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"User validation test\", () =>{\r",
+							"    let jsondata = pm.response.json();\r",
+							"    pm.expect(jsondata.user.email).to.equal(\"abdu@gmail.com\");\r",
+							"\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/getUserDetailByEmail?email=abdu@gmail.com",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"getUserDetailByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "abdu@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE METHOD To Delete User Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response code is 200.\", () => {\r",
+							"    pm.expect(pm.response.json().responseCode).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Account deleted!\", () =>{\r",
+							"    pm.expect(pm.response.text()).to.include(\"Account deleted!\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abdu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abdu@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/deleteAccount",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"deleteAccount"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

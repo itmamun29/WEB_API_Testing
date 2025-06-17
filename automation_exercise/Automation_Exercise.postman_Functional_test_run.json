@@ -1,0 +1,840 @@
+{
+	"id": "9a8b06ae-9639-403b-950f-2625e6a04316",
+	"name": "Automation Exercise",
+	"timestamp": "2025-06-17T21:35:11.110Z",
+	"collection_id": "44888422-35a99dc4-5a33-4675-8f55-e86bacf79abe",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 150,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-17T21:34:40.587Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "55a92108-6727-4005-8d18-d6becb0a26cd",
+			"name": "Get All Products List",
+			"url": "https://automationexercise.com/api/productsList",
+			"time": 557,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"JSON response code is 200": true,
+				"All products list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"JSON response code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"All products list": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				1509,
+				363,
+				375,
+				389,
+				557
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"JSON response code is 200": true,
+					"All products list": true
+				},
+				{
+					"Status code is 200": true,
+					"JSON response code is 200": true,
+					"All products list": true
+				},
+				{
+					"Status code is 200": true,
+					"JSON response code is 200": true,
+					"All products list": true
+				},
+				{
+					"Status code is 200": true,
+					"JSON response code is 200": true,
+					"All products list": true
+				},
+				{
+					"Status code is 200": true,
+					"JSON response code is 200": true,
+					"All products list": true
+				}
+			]
+		},
+		{
+			"id": "f277dc85-c301-4015-86b5-6d0ec5d1362f",
+			"name": "POST To All Products List",
+			"url": "https://automationexercise.com/api/productsList",
+			"time": 331,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Message status code is 200": true,
+				"Response code is 405.": true,
+				"This request method is not supported.": true
+			},
+			"testPassFailCounts": {
+				"Message status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response code is 405.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"This request method is not supported.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				310,
+				332,
+				305,
+				312,
+				331
+			],
+			"allTests": [
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				}
+			]
+		},
+		{
+			"id": "3dc8ba5a-dce5-446c-8a20-6f3243c9c830",
+			"name": "Get All Brands List",
+			"url": "https://automationexercise.com/api/brandsList",
+			"time": 352,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 200.": true
+			},
+			"testPassFailCounts": {
+				"Response code is 200.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				307,
+				311,
+				315,
+				311,
+				352
+			],
+			"allTests": [
+				{
+					"Response code is 200.": true
+				},
+				{
+					"Response code is 200.": true
+				},
+				{
+					"Response code is 200.": true
+				},
+				{
+					"Response code is 200.": true
+				},
+				{
+					"Response code is 200.": true
+				}
+			]
+		},
+		{
+			"id": "7fd16d6b-86ed-4f96-b333-614fc13f7df4",
+			"name": "PUT To All Brands List",
+			"url": "https://automationexercise.com/api/brandsList",
+			"time": 338,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Message status code is 200": true,
+				"Response code is 405.": true,
+				"This request method is not supported.": true
+			},
+			"testPassFailCounts": {
+				"Message status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response code is 405.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"This request method is not supported.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				333,
+				310,
+				308,
+				315,
+				338
+			],
+			"allTests": [
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				}
+			]
+		},
+		{
+			"id": "56c7a602-28b3-48dc-a9b7-12c4f1523afa",
+			"name": "POST To Search Product",
+			"url": "https://automationexercise.com/api/searchProduct",
+			"time": 364,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Message status code is 200": true,
+				"Response code is 200.": true
+			},
+			"testPassFailCounts": {
+				"Message status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response code is 200.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				335,
+				349,
+				345,
+				359,
+				364
+			],
+			"allTests": [
+				{
+					"Message status code is 200": true,
+					"Response code is 200.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 200.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 200.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 200.": true
+				},
+				{
+					"Message status code is 200": true,
+					"Response code is 200.": true
+				}
+			]
+		},
+		{
+			"id": "d72906a7-0768-48c4-86a6-5c0e69f6019b",
+			"name": "POST To Search Product without search_product parameter",
+			"url": "https://automationexercise.com/api/searchProduct",
+			"time": 327,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 405.": true,
+				"This request method is not supported.": true
+			},
+			"testPassFailCounts": {
+				"Response code is 405.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"This request method is not supported.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				316,
+				309,
+				339,
+				375,
+				327
+			],
+			"allTests": [
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				}
+			]
+		},
+		{
+			"id": "2431b83a-ba47-46a4-af13-fa2a233516ef",
+			"name": "POST To Verify Login with valid details",
+			"url": "https://automationexercise.com/api/verifyLogin",
+			"time": 324,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 200.": true,
+				"Response message is User exists": true
+			},
+			"testPassFailCounts": {
+				"Response code is 200.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response message is User exists": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				315,
+				334,
+				335,
+				317,
+				324
+			],
+			"allTests": [
+				{
+					"Response code is 200.": true,
+					"Response message is User exists": true
+				},
+				{
+					"Response code is 200.": true,
+					"Response message is User exists": true
+				},
+				{
+					"Response code is 200.": true,
+					"Response message is User exists": true
+				},
+				{
+					"Response code is 200.": true,
+					"Response message is User exists": true
+				},
+				{
+					"Response code is 200.": true,
+					"Response message is User exists": true
+				}
+			]
+		},
+		{
+			"id": "bd42b3f1-75b8-4c3f-b364-9bd1f961f4c2",
+			"name": "POST To Verify Login without email parameter",
+			"url": "https://automationexercise.com/api/verifyLogin",
+			"time": 324,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 400.": true,
+				"Bad request, email or password parameter is missing in POST request.": true
+			},
+			"testPassFailCounts": {
+				"Response code is 400.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Bad request, email or password parameter is missing in POST request.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				353,
+				315,
+				306,
+				343,
+				324
+			],
+			"allTests": [
+				{
+					"Response code is 400.": true,
+					"Bad request, email or password parameter is missing in POST request.": true
+				},
+				{
+					"Response code is 400.": true,
+					"Bad request, email or password parameter is missing in POST request.": true
+				},
+				{
+					"Response code is 400.": true,
+					"Bad request, email or password parameter is missing in POST request.": true
+				},
+				{
+					"Response code is 400.": true,
+					"Bad request, email or password parameter is missing in POST request.": true
+				},
+				{
+					"Response code is 400.": true,
+					"Bad request, email or password parameter is missing in POST request.": true
+				}
+			]
+		},
+		{
+			"id": "5e975f45-9827-4636-89d1-b70243dd545b",
+			"name": "DELETE To Verify Login",
+			"url": "https://automationexercise.com/api/verifyLogin",
+			"time": 329,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 405.": true,
+				"This request method is not supported.": true
+			},
+			"testPassFailCounts": {
+				"Response code is 405.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"This request method is not supported.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				310,
+				300,
+				317,
+				321,
+				329
+			],
+			"allTests": [
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				},
+				{
+					"Response code is 405.": true,
+					"This request method is not supported.": true
+				}
+			]
+		},
+		{
+			"id": "082880b6-dd0d-44e0-99ce-1b52000832e9",
+			"name": "POST To Verify Login with invalid details",
+			"url": "https://automationexercise.com/api/verifyLogin",
+			"time": 348,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 405.": true,
+				"TUser not found!": true
+			},
+			"testPassFailCounts": {
+				"Response code is 405.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TUser not found!": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				316,
+				321,
+				316,
+				339,
+				348
+			],
+			"allTests": [
+				{
+					"Response code is 405.": true,
+					"TUser not found!": true
+				},
+				{
+					"Response code is 405.": true,
+					"TUser not found!": true
+				},
+				{
+					"Response code is 405.": true,
+					"TUser not found!": true
+				},
+				{
+					"Response code is 405.": true,
+					"TUser not found!": true
+				},
+				{
+					"Response code is 405.": true,
+					"TUser not found!": true
+				}
+			]
+		},
+		{
+			"id": "19bed33b-1774-4233-8745-718f7bfee4c9",
+			"name": "POST To Create/Register User Account",
+			"url": "https://automationexercise.com/api/createAccount",
+			"time": 354,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 201.": true,
+				"User created!": true
+			},
+			"testPassFailCounts": {
+				"Response code is 201.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User created!": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				335,
+				350,
+				348,
+				466,
+				354
+			],
+			"allTests": [
+				{
+					"Response code is 201.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 201.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 201.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 201.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 201.": true,
+					"User created!": true
+				}
+			]
+		},
+		{
+			"id": "2194fe4a-f014-4543-b8db-d816a7dbfe4c",
+			"name": "PUT METHOD To Update User Account",
+			"url": "https://automationexercise.com/api/updateAccount",
+			"time": 359,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 200.": true,
+				"User created!": true
+			},
+			"testPassFailCounts": {
+				"Response code is 200.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User created!": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				343,
+				342,
+				337,
+				598,
+				359
+			],
+			"allTests": [
+				{
+					"Response code is 200.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 200.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 200.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 200.": true,
+					"User created!": true
+				},
+				{
+					"Response code is 200.": true,
+					"User created!": true
+				}
+			]
+		},
+		{
+			"id": "d785c84e-239a-40d3-b602-88f4d143a49c",
+			"name": "GET user account detail by email",
+			"url": "https://automationexercise.com/api/getUserDetailByEmail?email=abdu@gmail.com",
+			"time": 348,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 200.": true,
+				"User validation test": true
+			},
+			"testPassFailCounts": {
+				"Response code is 200.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User validation test": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				391,
+				303,
+				351,
+				333,
+				348
+			],
+			"allTests": [
+				{
+					"Response code is 200.": true,
+					"User validation test": true
+				},
+				{
+					"Response code is 200.": true,
+					"User validation test": true
+				},
+				{
+					"Response code is 200.": true,
+					"User validation test": true
+				},
+				{
+					"Response code is 200.": true,
+					"User validation test": true
+				},
+				{
+					"Response code is 200.": true,
+					"User validation test": true
+				}
+			]
+		},
+		{
+			"id": "fcd51587-0092-4da3-9184-1fb37361a999",
+			"name": "DELETE METHOD To Delete User Account",
+			"url": "https://automationexercise.com/api/deleteAccount",
+			"time": 346,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 200.": true,
+				"Account deleted!": true
+			},
+			"testPassFailCounts": {
+				"Response code is 200.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Account deleted!": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				350,
+				324,
+				334,
+				433,
+				346
+			],
+			"allTests": [
+				{
+					"Response code is 200.": true,
+					"Account deleted!": true
+				},
+				{
+					"Response code is 200.": true,
+					"Account deleted!": true
+				},
+				{
+					"Response code is 200.": true,
+					"Account deleted!": true
+				},
+				{
+					"Response code is 200.": true,
+					"Account deleted!": true
+				},
+				{
+					"Response code is 200.": true,
+					"Account deleted!": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 25229,
+	"collection": {
+		"requests": [
+			{
+				"id": "55a92108-6727-4005-8d18-d6becb0a26cd",
+				"method": "GET"
+			},
+			{
+				"id": "f277dc85-c301-4015-86b5-6d0ec5d1362f",
+				"method": "POST"
+			},
+			{
+				"id": "3dc8ba5a-dce5-446c-8a20-6f3243c9c830",
+				"method": "GET"
+			},
+			{
+				"id": "7fd16d6b-86ed-4f96-b333-614fc13f7df4",
+				"method": "PUT"
+			},
+			{
+				"id": "56c7a602-28b3-48dc-a9b7-12c4f1523afa",
+				"method": "POST"
+			},
+			{
+				"id": "d72906a7-0768-48c4-86a6-5c0e69f6019b",
+				"method": "GET"
+			},
+			{
+				"id": "2431b83a-ba47-46a4-af13-fa2a233516ef",
+				"method": "POST"
+			},
+			{
+				"id": "bd42b3f1-75b8-4c3f-b364-9bd1f961f4c2",
+				"method": "POST"
+			},
+			{
+				"id": "5e975f45-9827-4636-89d1-b70243dd545b",
+				"method": "DELETE"
+			},
+			{
+				"id": "082880b6-dd0d-44e0-99ce-1b52000832e9",
+				"method": "POST"
+			},
+			{
+				"id": "19bed33b-1774-4233-8745-718f7bfee4c9",
+				"method": "POST"
+			},
+			{
+				"id": "2194fe4a-f014-4543-b8db-d816a7dbfe4c",
+				"method": "PUT"
+			},
+			{
+				"id": "d785c84e-239a-40d3-b602-88f4d143a49c",
+				"method": "GET"
+			},
+			{
+				"id": "fcd51587-0092-4da3-9184-1fb37361a999",
+				"method": "DELETE"
+			}
+		]
+	}
+}
